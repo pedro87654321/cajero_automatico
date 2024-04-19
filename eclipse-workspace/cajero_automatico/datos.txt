@@ -1,0 +1,13 @@
+Nombre cajero: servibanco
+Numero de cajero: 1023985.0
+Transacción: deposito
+Usuario: brandon
+Clave: 2425
+Tipo persona: 2
+Tipo persona: persona juridica
+Tipo tarjeta: 2
+Tipo tajeta: credito
+Numero tarjeta: 478376.0
+Su banco es: vsb
+Numero de cuenta: 9.8713465E7
+Saldo disponible: 3617000.0
