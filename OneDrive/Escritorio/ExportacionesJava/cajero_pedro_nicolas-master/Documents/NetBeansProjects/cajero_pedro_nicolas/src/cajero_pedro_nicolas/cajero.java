@@ -10,7 +10,7 @@ package cajero_pedro_nicolas;
  */
 public class cajero extends javax.swing.JFrame {
 
-    //NICOLAS PRUEBA
+    //NICOLAS PRUEBAA
     /**
      * Creates new form cajero
      */
