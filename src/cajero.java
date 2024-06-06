@@ -336,6 +336,7 @@ public class cajero extends javax.swing.JFrame {
           {
             borrar=borrar.substring(0, borrar.length() - 1);
             obtener_opciones.setText(borrar);
+            
            } 
     }//GEN-LAST:event_borrarActionPerformed
 
