@@ -197,10 +197,9 @@ public class cajero extends javax.swing.JFrame {
         jPanel1.add(continuar, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 690, 90, 40));
 
         mostrar_opciones.setText("ingrese usuario");
-        mostrar_opciones.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel1.add(mostrar_opciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 380, 220, 20));
 
-        obtener_opciones.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        obtener_opciones.setText("0");
         jPanel1.add(obtener_opciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 400, 220, 20));
 
         consultar_saldo.setBackground(new java.awt.Color(204, 204, 204));
@@ -243,28 +242,24 @@ public class cajero extends javax.swing.JFrame {
         });
         jPanel1.add(transaccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 500, 90, 30));
 
-        algo2.setText("algo2");
-        algo2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel1.add(algo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 420, 220, -1));
+        algo2.setText("0");
+        jPanel1.add(algo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 420, 220, 20));
+        algo2.getAccessibleContext().setAccessibleName("");
+        algo2.getAccessibleContext().setAccessibleDescription("");
 
-        jLabel3.setText("algo3");
-        jLabel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 440, 220, -1));
+        jLabel3.setText("0");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 440, 220, 20));
 
-        algo4.setText("algo4");
-        algo4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel1.add(algo4, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 460, 220, -1));
+        algo4.setText("0");
+        jPanel1.add(algo4, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 460, 220, 20));
 
-        algo5.setText("algo5");
-        algo5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel1.add(algo5, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 480, 220, -1));
+        algo5.setText("0");
+        jPanel1.add(algo5, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 480, 220, 20));
 
-        algo6.setText("algo6");
-        algo6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel1.add(algo6, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 500, 220, -1));
+        algo6.setText("0");
+        jPanel1.add(algo6, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 500, 220, 20));
 
-        algo7.setText("algo7");
-        algo7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        algo7.setText("0");
         jPanel1.add(algo7, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 520, 220, 20));
 
         fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/cajero.jpg"))); // NOI18N
