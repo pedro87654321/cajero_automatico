@@ -4,14 +4,12 @@
  */
 
 /**
- *
- * @author estudiantes
+ * autores
+ *pedro cancelada
+ *nicolas cervantes
  */
 public class cajero extends javax.swing.JFrame {
-
-    /**
-     * Creates new form cajero
-     */
+     String guardar = null;
     public cajero() {
         initComponents();
     }
@@ -28,7 +26,7 @@ public class cajero extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        borrar = new javax.swing.JButton();
         uno = new javax.swing.JButton();
         dos = new javax.swing.JButton();
         tres = new javax.swing.JButton();
@@ -39,11 +37,11 @@ public class cajero extends javax.swing.JFrame {
         ocho = new javax.swing.JButton();
         nueve = new javax.swing.JButton();
         cero = new javax.swing.JButton();
-        algo = new javax.swing.JButton();
+        salir = new javax.swing.JButton();
         continuar = new javax.swing.JButton();
         mostrar_opciones = new javax.swing.JLabel();
         obtener_opciones = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
+        consultar_saldo = new javax.swing.JButton();
         retirar = new javax.swing.JButton();
         depocitar = new javax.swing.JButton();
         transaccion = new javax.swing.JButton();
@@ -53,7 +51,6 @@ public class cajero extends javax.swing.JFrame {
         algo5 = new javax.swing.JLabel();
         algo6 = new javax.swing.JLabel();
         algo7 = new javax.swing.JLabel();
-        Salir = new javax.swing.JButton();
         fondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -66,25 +63,45 @@ public class cajero extends javax.swing.JFrame {
         jLabel2.setText("#32456");
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 230, 50, 20));
 
-        jButton1.setBackground(new java.awt.Color(204, 0, 0));
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("borrar");
-        jButton1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 0, 0)));
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 590, 70, 40));
+        borrar.setBackground(new java.awt.Color(204, 0, 0));
+        borrar.setForeground(new java.awt.Color(255, 255, 255));
+        borrar.setText("borrar");
+        borrar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 0, 0)));
+        borrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                borrarActionPerformed(evt);
+            }
+        });
+        jPanel1.add(borrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 590, 70, 40));
 
         uno.setBackground(new java.awt.Color(204, 204, 204));
         uno.setText("1");
         uno.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        uno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                unoActionPerformed(evt);
+            }
+        });
         jPanel1.add(uno, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 590, 40, 40));
 
         dos.setBackground(new java.awt.Color(204, 204, 204));
         dos.setText("2");
         dos.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        dos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                dosActionPerformed(evt);
+            }
+        });
         jPanel1.add(dos, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 590, 40, 40));
 
         tres.setBackground(new java.awt.Color(204, 204, 204));
         tres.setText("3");
         tres.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tres.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tresActionPerformed(evt);
+            }
+        });
         jPanel1.add(tres, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 590, 40, 40));
 
         seis.setBackground(new java.awt.Color(204, 204, 204));
@@ -100,26 +117,51 @@ public class cajero extends javax.swing.JFrame {
         cinco.setBackground(new java.awt.Color(204, 204, 204));
         cinco.setText("5");
         cinco.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cinco.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cincoActionPerformed(evt);
+            }
+        });
         jPanel1.add(cinco, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 640, 40, 40));
 
         cuatro.setBackground(new java.awt.Color(204, 204, 204));
         cuatro.setText("4");
         cuatro.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cuatro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cuatroActionPerformed(evt);
+            }
+        });
         jPanel1.add(cuatro, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 640, 40, 40));
 
         siete.setBackground(new java.awt.Color(204, 204, 204));
         siete.setText("7");
         siete.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        siete.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sieteActionPerformed(evt);
+            }
+        });
         jPanel1.add(siete, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 690, 40, 40));
 
         ocho.setBackground(new java.awt.Color(204, 204, 204));
         ocho.setText("8");
         ocho.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        ocho.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ochoActionPerformed(evt);
+            }
+        });
         jPanel1.add(ocho, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 690, 40, 40));
 
         nueve.setBackground(new java.awt.Color(204, 204, 204));
         nueve.setText("9");
         nueve.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        nueve.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nueveActionPerformed(evt);
+            }
+        });
         jPanel1.add(nueve, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 690, 40, 40));
 
         cero.setBackground(new java.awt.Color(204, 204, 204));
@@ -132,44 +174,73 @@ public class cajero extends javax.swing.JFrame {
         });
         jPanel1.add(cero, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 740, 40, 40));
 
-        algo.setBackground(new java.awt.Color(255, 204, 0));
-        algo.setForeground(new java.awt.Color(255, 255, 255));
-        algo.setText("algo");
-        algo.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 204, 0)));
-        jPanel1.add(algo, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 640, 60, 40));
+        salir.setBackground(new java.awt.Color(255, 204, 0));
+        salir.setForeground(new java.awt.Color(255, 255, 255));
+        salir.setText("Salir");
+        salir.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 204, 0)));
+        salir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                salirActionPerformed(evt);
+            }
+        });
+        jPanel1.add(salir, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 640, 60, 40));
 
         continuar.setBackground(new java.awt.Color(0, 102, 0));
         continuar.setForeground(new java.awt.Color(255, 255, 255));
         continuar.setText("continuar");
         continuar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 102, 0)));
+        continuar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                continuarActionPerformed(evt);
+            }
+        });
         jPanel1.add(continuar, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 690, 90, 40));
 
-        mostrar_opciones.setText("mostrar_opciones");
+        mostrar_opciones.setText("ingrese usuario");
         mostrar_opciones.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel1.add(mostrar_opciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 380, 220, 20));
 
-        obtener_opciones.setText("obtener_opciones");
         obtener_opciones.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel1.add(obtener_opciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 400, 220, 20));
 
-        jButton2.setBackground(new java.awt.Color(204, 204, 204));
-        jButton2.setText("consultar saldo");
-        jButton2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 380, 90, 30));
+        consultar_saldo.setBackground(new java.awt.Color(204, 204, 204));
+        consultar_saldo.setText("consultar saldo");
+        consultar_saldo.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        consultar_saldo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                consultar_saldoActionPerformed(evt);
+            }
+        });
+        jPanel1.add(consultar_saldo, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 380, 90, 30));
 
         retirar.setBackground(new java.awt.Color(204, 204, 204));
         retirar.setText("retirar");
         retirar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        retirar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                retirarActionPerformed(evt);
+            }
+        });
         jPanel1.add(retirar, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 420, 90, 30));
 
         depocitar.setBackground(new java.awt.Color(204, 204, 204));
         depocitar.setText("depositar");
         depocitar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        depocitar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                depocitarActionPerformed(evt);
+            }
+        });
         jPanel1.add(depocitar, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 460, 90, 30));
 
         transaccion.setBackground(new java.awt.Color(204, 204, 204));
         transaccion.setText("transaccion");
         transaccion.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        transaccion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                transaccionActionPerformed(evt);
+            }
+        });
         jPanel1.add(transaccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 500, 90, 30));
 
         algo2.setText("algo2");
@@ -196,18 +267,6 @@ public class cajero extends javax.swing.JFrame {
         algo7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel1.add(algo7, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 520, 220, 20));
 
-        Salir.setBackground(new java.awt.Color(255, 102, 51));
-        Salir.setText("SALIR");
-        Salir.setActionCommand("");
-        Salir.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        Salir.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SalirActionPerformed(evt);
-            }
-        });
-        jPanel1.add(Salir, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 640, 80, 30));
-        Salir.getAccessibleContext().setAccessibleName("Salir");
-
         fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/cajero.jpg"))); // NOI18N
         jPanel1.add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 60, -1, 938));
 
@@ -231,21 +290,110 @@ public class cajero extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void seisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_seisActionPerformed
-        // TODO add your handling code here:
+        guardar = obtener_opciones.getText();
+        guardar = "6";
+        obtener_opciones.setText(guardar);
     }//GEN-LAST:event_seisActionPerformed
 
     private void ceroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ceroActionPerformed
-        // TODO add your handling code here:
+        guardar = obtener_opciones.getText();
+        guardar = "0";
+        obtener_opciones.setText(guardar);
     }//GEN-LAST:event_ceroActionPerformed
 
-    private void SalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalirActionPerformed
+    private void unoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_unoActionPerformed
+        guardar = obtener_opciones.getText();
+        guardar = "1";
+        obtener_opciones.setText(guardar);
+    }//GEN-LAST:event_unoActionPerformed
+
+    private void dosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dosActionPerformed
+         guardar = obtener_opciones.getText();
+        guardar = "2";
+        obtener_opciones.setText(guardar);
+    }//GEN-LAST:event_dosActionPerformed
+
+    private void tresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tresActionPerformed
+         guardar = obtener_opciones.getText();
+        guardar = "3";
+        obtener_opciones.setText(guardar);
+    }//GEN-LAST:event_tresActionPerformed
+
+    private void cuatroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cuatroActionPerformed
+        guardar = obtener_opciones.getText();
+        guardar = "4";
+      obtener_opciones.setText(guardar);
+    }//GEN-LAST:event_cuatroActionPerformed
+
+    private void cincoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cincoActionPerformed
+        guardar = obtener_opciones.getText();
+        guardar = "5";
+        obtener_opciones.setText(guardar);
+    }//GEN-LAST:event_cincoActionPerformed
+
+    private void sieteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sieteActionPerformed
+       guardar = obtener_opciones.getText();
+        guardar = "7";
+        obtener_opciones.setText(guardar);
+    }//GEN-LAST:event_sieteActionPerformed
+
+    private void ochoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ochoActionPerformed
+        guardar = obtener_opciones.getText();
+        guardar = "8";
+        obtener_opciones.setText(guardar);
+    }//GEN-LAST:event_ochoActionPerformed
+
+    private void nueveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nueveActionPerformed
+        guardar = obtener_opciones.getText();
+        guardar = "9";
+        obtener_opciones.setText(guardar);
+    }//GEN-LAST:event_nueveActionPerformed
+
+    private void borrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_borrarActionPerformed
+              /* guardar= obtener_opciones.getText();
+        if (!guardar.isEmpty()) {
+            guardar = guardar.substring(0, guardar.length() - 1);
+            obtener_opciones.setText(guardar);
+           } 
+        else {
+    //nada
+     }*/
+    }//GEN-LAST:event_borrarActionPerformed
+
+    private void salirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salirActionPerformed
+       
+    }//GEN-LAST:event_salirActionPerformed
+
+    private void continuarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_continuarActionPerformed
+        try {
+        String resultado =(obtener_opciones.getText());
+        algo2.setText(resultado);
+    } catch (ArithmeticException e) {
+        algo2.setText("Error: " + e.getMessage());
+    }
+    }//GEN-LAST:event_continuarActionPerformed
+
+    private void consultar_saldoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_consultar_saldoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_SalirActionPerformed
+    }//GEN-LAST:event_consultar_saldoActionPerformed
+
+    private void retirarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_retirarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_retirarActionPerformed
+
+    private void depocitarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_depocitarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_depocitarActionPerformed
+
+    private void transaccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_transaccionActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_transaccionActionPerformed
 
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
+        System.out.println("prueba");
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -278,22 +426,20 @@ public class cajero extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton Salir;
-    private javax.swing.JButton algo;
     private javax.swing.JLabel algo2;
     private javax.swing.JLabel algo4;
     private javax.swing.JLabel algo5;
     private javax.swing.JLabel algo6;
     private javax.swing.JLabel algo7;
+    private javax.swing.JButton borrar;
     private javax.swing.JButton cero;
     private javax.swing.JButton cinco;
+    private javax.swing.JButton consultar_saldo;
     private javax.swing.JButton continuar;
     private javax.swing.JButton cuatro;
     private javax.swing.JButton depocitar;
     private javax.swing.JButton dos;
     private javax.swing.JLabel fondo;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -303,10 +449,15 @@ public class cajero extends javax.swing.JFrame {
     private javax.swing.JLabel obtener_opciones;
     private javax.swing.JButton ocho;
     private javax.swing.JButton retirar;
+    private javax.swing.JButton salir;
     private javax.swing.JButton seis;
     private javax.swing.JButton siete;
     private javax.swing.JButton transaccion;
     private javax.swing.JButton tres;
     private javax.swing.JButton uno;
     // End of variables declaration//GEN-END:variables
+
+    private double evaluarExpresion(String text) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }
